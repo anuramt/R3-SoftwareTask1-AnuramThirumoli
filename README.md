@@ -25,3 +25,13 @@ Here are the other pins in the 7-segment display and what I have done with them 
 
 ![image](https://user-images.githubusercontent.com/59899086/136716180-854a657f-7aea-40b6-9f32-a850eab69cac.png)
 
+**4. How is multiplexing used to control two 7-segment displays?** \
+Multiplexing is used to be able to control multiple devices using the same I/O lines instead of using seperate I/O lines. Even though this method is slightly more complex, it allows us to use less I/O lines. For example, instead of using 8 I/O lines by having two seperate CD4511 decoders, we are able to use only one decoder and consequently only need 4 I/O lines.
+
+For this project, I am using a common cathode 7-segment display. This means that the LEDs in the 7-segment display have a common cathode (ground), and each segment's LEDs must be connected to 5V for the segment to light up. Knowing this, if we ensure that the common cathode pin is not connected to ground, the 7-segment display will not light up. Therefore, we can use the same 7 lines from the single CD4511 decoder to display numbers on both 7-segment displays. We just have to ensure that when one 7-segment display is connected to ground, the other is not. Since we are doing this very quickly, it is impossible for our eyes to register that the 7-segment displays are turning on and off. 
+
+**5. How are the two 7-segment displays connected?** \
+
+
+
+![image](https://user-images.githubusercontent.com/59899086/136716378-516e92b3-1fb5-4952-8dbe-001006cc6694.png)
