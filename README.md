@@ -35,3 +35,5 @@ For this project, I am using a common cathode 7-segment display. This means that
 
 
 ![image](https://user-images.githubusercontent.com/59899086/136716378-516e92b3-1fb5-4952-8dbe-001006cc6694.png)
+
+***THANK YOU FOR READING!*** You can find my Arduino project on TinkerCAD at this link: \
