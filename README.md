@@ -41,3 +41,4 @@ Finally, we want to connect the common cathode pin of each 7-segment display to 
 Well, this README will allow you to understand the methodology used to build the projects circuitry and understand the code to run the project. The code has comments that will allow you to be able to come back to this README and refresh your memory on how and why the code is written and structured.
 
 **THANK YOU FOR READING!** You can find my Arduino project on TinkerCAD at this link: \
+https://www.tinkercad.com/things/idn425qP1kW
