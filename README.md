@@ -33,10 +33,11 @@ For this project, I am using a common cathode 7-segment display. This means that
 **5. How are the two 7-segment displays connected?** \
 From the CD4511 decoder, we have 7 pins ranging from A to G. Each pin corresponds to a certain segment on the 7-segment display. As we can see in the image below, we first need to wire each pin to a current limiting resistor of 330ohms before connecting it to the corresponding input pins of the 7-segment display. We must make sure that the A pin from the decoder is connected to the A pin of the 7-segment display. As you can also see, because we want to multiplex the two 7-segment displays, we connect both input pins of the 7-segment display together. For example, we would connect the A input of the left display to the A input of the right display. There is an 8th display pin called DP which stands for decimal point, and turns on the decimal point LED on the display. Since we are not using it, we do not need to wire it up.
 
-Finally, we want to connect the common cathode pin of each 7-segment display to a seperate NMOS transistor each. The NMOS transistor works by closing the circuit between the source pin and the drain pin when the gate pin is HIGH (at 5V). Since we have connected the source to ground and the drain to the common cathode pin of the 7-segment display, when we make the gate pin HIGH in our Arduino code, 
-
-
+Finally, we want to connect the common cathode pin of each 7-segment display to a seperate NMOS transistor each. The NMOS transistor works by closing the circuit between the source pin and the drain pin when the gate pin is HIGH (at 5V). Since we have connected the source to ground and the drain to the common cathode pin of the 7-segment display, when we make the gate pin HIGH in our Arduino code, we will display a number on the 7-segment display. We have implemented these two NMOS transistors so that we can keep both LOW unless we want to display a number, where we can selectively turn a 7-segment display on.
 
 ![image](https://user-images.githubusercontent.com/59899086/136716378-516e92b3-1fb5-4952-8dbe-001006cc6694.png)
+
+**6. So, how is this README relevant to my project?** \
+Well, this README will allow you to understand the methodology used to build the projects circuitry and understand the code to run the project. The code has comments that will allow you to be able to come back to this README and refresh your memory on how and why the code is written and structured.
 
 **THANK YOU FOR READING!** You can find my Arduino project on TinkerCAD at this link: \
