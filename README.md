@@ -14,7 +14,7 @@ int pot_range = map(analogRead(A0), 0, 1023, 0, 99);
 ```
 
 **3. How is the CD4511 decoder connected?** \
-Since I am using multiplexing to run the 7-segment displays, I only need to use one CD4511 decoder. This decoder uses Binary Coded Decimal to represent the numbers 0 to 9 using its binary equivalent (ex. the number 9 is the binary pattern 1001). Therefore, I need to use 4 digital pins and output HIGH and LOW using the binary pattern of the number I want to display to the CD4511 decoder. I do this by connecting the digital pins 8, 9, 10, and 11 from the Arduino Uno to the pin inputs 1, 2, 3, and 4 respectively (brown wires).
+Since I am using multiplexing to run the 7-segment displays, I only need to use one CD4511 decoder. This decoder uses Binary Coded Decimal to represent the numbers 0 to 9 using its binary equivalent (for example, the number 9 is the binary pattern 1001). Therefore, I need to use 4 digital pins and output HIGH and LOW using the binary pattern of the number I want to display to the CD4511 decoder. I do this by connecting the digital pins 8, 9, 10, and 11 from the Arduino Uno to the pin inputs 1, 2, 3, and 4 respectively (brown wires).
 
 Here are the other pins in the 7-segment display and what I have done with them (other than the 7-segment output pins):
 - *Power:* I have connected this to 5V power rail.
