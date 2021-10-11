@@ -31,9 +31,12 @@ Multiplexing is used to be able to control multiple devices using the same I/O l
 For this project, I am using a common cathode 7-segment display. This means that the LEDs in the 7-segment display have a common cathode (ground), and each segment's LEDs must be connected to 5V for the segment to light up. Knowing this, if we ensure that the common cathode pin is not connected to ground, the 7-segment display will not light up. Therefore, we can use the same 7 lines from the single CD4511 decoder to display numbers on both 7-segment displays. We just have to ensure that when one 7-segment display is connected to ground, the other is not. Since we are doing this very quickly, it is impossible for our eyes to register that the 7-segment displays are turning on and off. 
 
 **5. How are the two 7-segment displays connected?** \
+From the CD4511 decoder, we have 7 pins ranging from A to G. Each pin corresponds to a certain segment on the 7-segment display. As we can see in the image below, we first need to wire each pin to a current limiting resistor of 330ohms before connecting it to the corresponding input pins of the 7-segment display. We must make sure that the A pin from the decoder is connected to the A pin of the 7-segment display. As you can also see, because we want to multiplex the two 7-segment displays, we connect both input pins of the 7-segment display together. For example, we would connect the A input of the left display to the A input of the right display. There is an 8th display pin called DP which stands for decimal point, and turns on the decimal point LED on the display. Since we are not using it, we do not need to wire it up.
+
+Finally, we want to connect the common cathode pin of each 7-segment display to a seperate NMOS transistor each. The NMOS transistor works by closing the circuit between the source pin and the drain pin when the gate pin is HIGH (at 5V). Since we have connected the source to ground and the drain to the common cathode pin of the 7-segment display, when we make the gate pin HIGH in our Arduino code, 
 
 
 
 ![image](https://user-images.githubusercontent.com/59899086/136716378-516e92b3-1fb5-4952-8dbe-001006cc6694.png)
 
-***THANK YOU FOR READING!*** You can find my Arduino project on TinkerCAD at this link: \
+**THANK YOU FOR READING!** You can find my Arduino project on TinkerCAD at this link: \
