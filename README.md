@@ -8,7 +8,7 @@ The project is powered through the Arduino Uno's built-in 5V output and its grou
 
 **2. How is the potentiometer output measured by the Arduino Uno?** \
 The potentiometer is connected to 5V and ground through its Terminal 1 and Terminal 2 pins. To measure the voltage of the potentiometer, the wiper pin is connected to the analog input port A0 on the Arduino Uno (using the green wire). We are using the A0 (analog) port instead of the digital ports because instead of the 0V and 5V the digital ports output, we want to know the voltage in the range from 0V to 5V. \
-In order to convert the potentiometers output to a range from 0 to 99, we use Arduino's analogRead() and map() functions. In order to do this correctly, we must keep in mind that the analogRead() function returns a integer from 0 to 1023, with 0 being 0V and 1023 being 5V respectively. Therefore, we have to map the analogRead() function using the values 0 to 1023, to the values 0 to 99. The code to do this is given below:
+In order to convert the potentiometers output to a range from 0 to 99, we use Arduino's analogRead() and map() functions. To do this correctly, we must keep in mind that the analogRead() function returns a integer from 0 to 1023, with 0 being 0V and 1023 being 5V respectively. Therefore, we have to map the analogRead() function using the values 0 to 1023, to the values 0 to 99. The code to do this is given below:
 ```
 int pot_range = map(analogRead(A0), 0, 1023, 0, 99);
 ```
